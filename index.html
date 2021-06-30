@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .btn-success{display: none;}
+    </style>
+</head>
+<body>
+    
+
+   <div class=" m-auto w-75  py-4">
+
+    <div class=" form-group ">
+        <label for="productName">productName :</label>
+        <input type="text" class=" form-control" id="productName">
+    </div>
+
+    <div class=" form-group ">
+        <label for="productPrice">productPrice :</label>
+        <input type="number" class=" form-control" id="productPrice">
+    </div>
+
+    <div class=" form-group ">
+        <label for="productCategory">productCategory :</label>
+        <input type="text" class=" form-control" id="productCategory">
+    </div>
+
+    <div class=" form-group ">
+        <label for="productDesc">productDesc :</label>
+        <textarea type="text" class=" form-control" id="productDesc"> </textarea>
+    </div>
+
+    <button onclick="addProduct();" class=" btn btn-info">add product</button>
+    <button onclick="update();" class="btn btn-success" id="updataBtn">update product</button>
+
+   </div>
+
+   
+   <div class=" w-50  m-auto py-3">
+    <label for="search"></label>
+    <input onkeyup="searchProduct(this.value)" type="text" class=" form-control" placeholder="search">
+     </div>
+
+       <table class=" w-75 text-center py-3 m-auto table">
+           <thead>
+               <th>index</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Category</th>
+               <th>Desc</th>
+               <th>update</th>
+               <th>delete</th>
+           </thead>
+
+           <tbody id="tableBody">
+       
+           </tbody>
+
+       </table>
+
+
+
+
+
+    <script src="style.js"></script>
+</body>
+</html>
